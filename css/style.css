@@ -1,0 +1,614 @@
+/*=======================
+Theme: myFolio Personal Portfolio Template
+Author: JLP Media
+Email: jennpereira13@gmail.com / lianplameras@gmail.com
+Version: 1.0
+Date Created: August 24, 2014
+=======================
+CSS Style Structure
+- General
+- Preloader
+- Navigation
+- Header
+- Services
+- Features
+- Portfolio
+- About Section
+- Testimonial Section 
+- Team Section
+- Contact Section
+- Map Section
+- Footer Section
+- Portfolio Modal
+
+=======================*/
+/***********************
+****** General *********
+***********************/
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+.text-muted { color: #777 }
+.text-primary { color: #fed136 }
+.small {
+    font-size: 12px;
+    padding-bottom: 20px;
+    color: rgb(116, 116, 116);
+    padding-top: 20px;
+}
+p {
+    font-size: 14px;
+    line-height: 1.75;
+    font-weight: 300;
+}
+p.large { font-size: 16px }
+a,
+a:hover,
+a:focus,
+a:active,
+a.active { outline: 0 }
+a { color: #fed136 }
+a:hover,
+a:focus,
+a:active,
+a.active { color: #fec503 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+.img-centered { margin: 0 auto }
+.bg-black { background-color: #000000 }
+.bg-light-gray { background-color: #f7f7f7 }
+.bg-darkest-gray { background-color: #222 }
+
+.mybtn {
+    padding: 10px 40px;
+    border-color: #FFFFFF;
+    border: 1px solid #0E010B;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    font-color: #0E010B;
+    background-color: rgba(239, 239, 240, .5);
+    letter-spacing: 2px;
+}
+.mybtn:hover {
+    /*color: #000000;*/
+    background-color: rgba(255, 255, 255, 1);
+    
+}
+.carousel-indicators { bottom: -30px }
+.carousel-indicators li {
+    display: inline-block;
+    width: 30px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid #fff;
+    border-radius: 0px;
+}
+section { padding: 60px 0 }
+section h2.section-heading {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 40px;
+    font-family: 'Shadows Into Light', cursive;
+    text-transform: none;
+}
+section h3.section-subheading {
+    margin-bottom: 75px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+/***********************
+****** Navigation ******
+***********************/
+.navbar-default {
+    border-color: transparent;
+    background-color: #000000;
+}
+.navbar-default .navbar-brand {
+    font-family: 'Shadows Into Light', cursive;
+    color: #FFFFFF;
+    font-size: 26px;
+}
+a.navbar-brand.page-scroll { margin-top: 0px }
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:active,
+.navbar-default .navbar-brand.active { color: #ffffff }
+.navbar-default .navbar-collapse { border-color: rgba(255,255,255,.02) }
+.navbar-default .navbar-toggle {
+    border-color: #FFFFFF;
+    background-color: transparent;
+    border-radius: 0px;
+}
+.navbar-default .navbar-toggle .icon-bar { background-color: #fff }
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus { background-color: transparent !important }
+.navbar-default .nav li a {
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #FFF;
+    margin: 0px 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    text-align: center;
+}
+.navbar-default .nav li a:hover,
+.navbar-default .nav li a:focus {
+    outline: 0;
+    color: #FFF;
+    background-color: transparent !important;
+}
+.navbar-default .navbar-nav>.active>a{
+    color: #000;
+    border-top: none;
+    background-color: #ffffff;
+}
+
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus{
+    color: #fff;
+    border-top: none;
+    background-color: transparent;
+} 
+/**************************
+******** PRELOADER ********
+**************************/
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff; /* change if the mask should have another color then white */
+    z-index: 9999; /* makes sure it stays on top */
+}
+#status {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    left: 0%; /* centers the loading animation horizontally one the screen */
+    top: 15%; /* centers the loading animation vertically one the screen */
+    background-image: url(../img/loading.gif); /* path to your loading animation */
+    background-repeat: no-repeat;
+    background-position: center;
+    /*margin: -100px 0 0 -100px; */ /* is width and height divided by two */
+}
+
+/***********************
+***** Home Section *****
+***********************/
+#home {
+    text-align: center;
+    color: #fff;
+    background-image: url(../img/bg/01_wood_laptop.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+#home .intro {
+    padding-top: 60px;
+    padding-bottom: 0;
+    margin-bottom: 0px;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+}
+#home .intro-text {
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+#home .intro-text .intro-lead-in {
+    margin-bottom: 25px;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 22px;
+    line-height: 22px;
+}
+#home .intro-text .intro-heading {
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+}
+/***********************
+*** Service Section ****
+***********************/
+.service-heading {
+    margin: 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-top: 25px;
+    font-family: 'Shadows Into Light', cursive;
+}
+.service { padding-top: 40px }
+i.fa.diamond {
+    background: #000000;
+    width: 110px;
+    height: 110px;
+    -webkit-transform: rotate(45deg); /* Safari and Chrome */
+    -moz-transform: rotate(45deg); /* Firefox */
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -o-transform: rotate(45deg); /* Opera */
+    transform: rotate(45deg);
+}
+
+#features{
+    background-image: url('https://scontent-atl3-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/12717172_10153944076178524_5122632479498302638_n.jpg?oh=a8bced47c903e9c020f22155f15ffb93&oe=577DE634');
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+#features .feature {
+    text-align: left;
+}
+
+.feature i.fa {
+    margin-top: 35px;
+}
+.dl-horizontal dt {
+    float: left;
+    width: 60px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.dl-horizontal dd {
+    margin-left: 100px;
+}
+/***********************
+*** Portfolio Section **
+***********************/
+#portfolio { color: #ffffff }
+.portfolioFilter a {
+    padding: 5px 10px;
+    color: #fff;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    border: 1px dotted #fff;
+    margin: 10px 5px;
+    text-decoration: none;
+    line-height: 40px;
+}
+.portfolioFilter a:hover {
+    color: #000000;
+    background: #fff;
+    text-decoration: none;
+}
+#portfolio .portfolio-item {
+    right: 0;
+    margin: 0 0 15px;
+}
+#portfolio .portfolio-item .portfolio-link {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover { opacity: 1 }
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i { margin-top: -12px }
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 { margin: 0 }
+#portfolio .portfolio-item .portfolio-caption {
+    margin: 0 auto;
+    padding: 25px;
+    max-width: 400px;
+    text-align: center;
+    background-color: #fff;
+}
+#portfolio .portfolio-item .portfolio-caption h4 {
+    margin: 0;
+    text-transform: none;
+}
+#portfolio .portfolio-item .portfolio-caption p {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: italic;
+}
+#portfolio * { z-index: 2 }
+.isotope-item { z-index: 2 }
+.isotope-hidden.isotope-item { z-index: 1 }
+.isotope,
+.isotope .isotope-item {
+    /* change duration value to whatever you like */
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+}
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
+}
+.portfolioContainer {
+    padding-bottom: 80px;
+    padding-top: 40px;
+}
+section#portfolio {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/***********************
+***** About Section ****
+***********************/
+#about .container {
+    padding-bottom: 20px;
+}
+.losange,
+.losange div {
+    margin: 0 auto;
+    transform-origin: 50% 50%;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.losange { transform: rotate(45deg) translateY(10px) }
+.losange img.img-diamond {
+    width: 150%;
+    height: 150%;
+    transform: rotate(-45deg) translateY(-35px) translateX(6px);
+}
+
+/***********************
+*** Contact Section ****
+***********************/
+#contact { color: #fff }
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #FFF;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+section#contact {
+    background-color: #222;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#contact .section-heading { color: #fff }
+section#contact .form-group { margin-bottom: 25px }
+section#contact .form-group input,
+section#contact .form-group textarea { padding: 20px }
+section#contact .form-group input.form-control { height: auto }
+section#contact .form-group textarea.form-control { height: 236px }
+section#contact .form-control:focus {
+    border-color: #12a5e3;
+    box-shadow: none;
+}
+section#contact::-webkit-input-placeholder {
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+section#contact:-moz-placeholder {
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+section#contact::-moz-placeholder {
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+section#contact:-ms-input-placeholder {
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+section#contact .text-danger { color: #989898; }
+
+/***********************
+***** Map Section ******
+***********************/
+#map {
+    width: 100%;
+    height: 300px;
+    margin-top: 0px;
+}
+
+/***********************
+**** Footer Section ****
+***********************/
+footer {
+    padding: 25px 0;
+    text-align: center;
+}
+.footer {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+a.footer-logo {
+    color: #000000;
+    font-size: 36px;
+    font-family: 'Shadows Into Light', cursive;
+    text-decoration: none;
+}
+a.footer-logo:hover { text-decoration: none }
+footer span.copyright {
+    text-transform: uppercase;
+    text-transform: none;
+    font-family: 'Roboto', sans-serif;
+    line-height: 40px;
+}
+footer ul.quicklinks a {
+    margin-top: 40px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    text-transform: none;
+    font-family: 'Roboto', sans-serif;
+    line-height: 40px;
+    color: #000000;
+    text-transform: uppercase;
+}
+footer ul.quicklinks a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+ul.social-buttons {
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+footer ul.social-buttons li a:hover{
+    color: #ffffff;
+    background-color: #565656;
+}
+ul.social-buttons li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 0%;
+    font-size: 20px;
+    line-height: 40px;
+    outline: 0;
+    color: #fff;
+    background-color: #222;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+ul.social-buttons li a:hover,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:active { background-color: #fed136 }
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn:active:focus { outline: 0 }
+.portfolio-modal .modal-content {
+    padding: 100px 0;
+    min-height: 100%;
+    border: 0;
+    border-radius: 0;
+    text-align: center;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: black;
+    color: #fff;
+}
+
+/***********************
+**** Portfolio-Modal ***
+***********************/
+.portfolio-modal .modal-content h2 {
+    margin-bottom: 15px;
+    font-size: 3em;
+    font-family: 'Shadows Into Light', cursive;
+}
+.portfolio-modal .modal-content p { margin-bottom: 30px }
+.portfolio-modal .modal-content p.item-intro {
+    margin: 20px 0 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: italic;
+}
+.portfolio-modal .modal-content ul.list-inline {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.portfolio-modal .modal-content img { margin-bottom: 30px }
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.portfolio-modal .close-modal:hover { opacity: .3 }
+.portfolio-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 75px;
+    margin-left: 35px;
+    background-color: #ffffff;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.portfolio-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 75px;
+    background-color: #ffffff;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
