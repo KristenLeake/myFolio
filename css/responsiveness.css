@@ -120,12 +120,7 @@ Date Created: August 24, 2014
         font-weight: 700;
         line-height: 75px;
     }
-    h1 span.testimonial {
-        margin-bottom: 25px;
-        font-family: 'Shadows Into Light', cursive;
-        font-size: 20px;
-        line-height: 22px;
-        color: #ffffff;
+    
     }
     section h3.section-subheading {
         margin-bottom: 75px;
@@ -135,30 +130,4 @@ Date Created: August 24, 2014
         font-weight: 300;
         letter-spacing: 2px;
     }
-}
-@media (min-width:992px) { 
-    .timeline>li { min-height: 150px }
-    .timeline>li .timeline-panel { padding: 0 20px 20px }
-    .timeline>li .timeline-image {
-        width: 100px;
-        height: 100px;
-        margin-left: -43px;
-    }
-    .timeline>li .timeline-image h4 {
-        margin-top: 30px;
-        font-size: 18px;
-        line-height: 26px;
-    }
-    .timeline>li.timeline-inverted>.timeline-panel { padding: 0 20px 20px }
-}
-@media (min-width:1200px) { 
-    .timeline>li { min-height: 170px }
-    .timeline>li .timeline-panel { padding: 0 20px 20px 100px }
-    .timeline>li .timeline-image {
-        width: 100px;
-        height: 100px;
-        margin-left: -44px;
-    }
-    .timeline>li .timeline-image h4 { margin-top: 40px }
-    .timeline>li.timeline-inverted>.timeline-panel { padding: 0 100px 20px 20px }
 }
